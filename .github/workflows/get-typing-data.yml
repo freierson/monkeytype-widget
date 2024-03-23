@@ -10,6 +10,7 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Extract typing data.
         run: curl https://api.monkeytype.com./users/filipr1/profile -o "typing.txt"
-      - uses: freierson/monkeytype-widget@v5
+      - uses: stefanzweifel/git-auto-commit-action@v5
