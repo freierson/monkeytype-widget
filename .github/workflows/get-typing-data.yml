@@ -12,5 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Extract typing data.
+        working-directory: ${{ github.workspace }}
         run: curl https://api.monkeytype.com./users/filipr1/profile -o "typing.txt"
       - uses: stefanzweifel/git-auto-commit-action@v5
